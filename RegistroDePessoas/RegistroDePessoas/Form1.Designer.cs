@@ -32,27 +32,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nudIdade = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdoOutro = new System.Windows.Forms.RadioButton();
             this.rdoMasculino = new System.Windows.Forms.RadioButton();
             this.rdoFeminino = new System.Windows.Forms.RadioButton();
             this.dgvRegistros = new System.Windows.Forms.DataGridView();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rdoOutro = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbProfissao = new System.Windows.Forms.ComboBox();
-            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdade)).BeginInit();
+            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbProfissao = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).BeginInit();
@@ -84,37 +81,6 @@
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Idade:";
-            // 
-            // nudIdade
-            // 
-            this.nudIdade.Location = new System.Drawing.Point(231, 36);
-            this.nudIdade.Maximum = new decimal(new int[] {
-            110,
-            0,
-            0,
-            0});
-            this.nudIdade.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudIdade.Name = "nudIdade";
-            this.nudIdade.Size = new System.Drawing.Size(58, 20);
-            this.nudIdade.TabIndex = 5;
-            this.nudIdade.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -144,6 +110,17 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sexo";
+            // 
+            // rdoOutro
+            // 
+            this.rdoOutro.AutoSize = true;
+            this.rdoOutro.Location = new System.Drawing.Point(159, 20);
+            this.rdoOutro.Name = "rdoOutro";
+            this.rdoOutro.Size = new System.Drawing.Size(51, 17);
+            this.rdoOutro.TabIndex = 2;
+            this.rdoOutro.TabStop = true;
+            this.rdoOutro.Text = "Outro";
+            this.rdoOutro.UseVisualStyleBackColor = true;
             // 
             // rdoMasculino
             // 
@@ -187,62 +164,6 @@
             this.dgvRegistros.ReadOnly = true;
             this.dgvRegistros.Size = new System.Drawing.Size(510, 162);
             this.dgvRegistros.TabIndex = 9;
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(80, 32);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(101, 20);
-            this.dtpNascimento.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Nascimento:";
-            // 
-            // rdoOutro
-            // 
-            this.rdoOutro.AutoSize = true;
-            this.rdoOutro.Location = new System.Drawing.Point(159, 20);
-            this.rdoOutro.Name = "rdoOutro";
-            this.rdoOutro.Size = new System.Drawing.Size(51, 17);
-            this.rdoOutro.TabIndex = 2;
-            this.rdoOutro.TabStop = true;
-            this.rdoOutro.Text = "Outro";
-            this.rdoOutro.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Profissão:";
-            // 
-            // cmbProfissao
-            // 
-            this.cmbProfissao.FormattingEnabled = true;
-            this.cmbProfissao.Items.AddRange(new object[] {
-            "Docente",
-            "Jardineiro",
-            "Faxineiro",
-            "Segurança",
-            "Motorista",
-            "Secretária"});
-            this.cmbProfissao.Location = new System.Drawing.Point(80, 96);
-            this.cmbProfissao.Name = "cmbProfissao";
-            this.cmbProfissao.Size = new System.Drawing.Size(101, 21);
-            this.cmbProfissao.TabIndex = 13;
-            // 
-            // pessoaBindingSource
-            // 
-            this.pessoaBindingSource.DataSource = typeof(RegistroDePessoas.Pessoa);
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -289,6 +210,51 @@
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // pessoaBindingSource
+            // 
+            this.pessoaBindingSource.DataSource = typeof(RegistroDePessoas.Pessoa);
+            // 
+            // dtpNascimento
+            // 
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNascimento.Location = new System.Drawing.Point(80, 32);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(101, 20);
+            this.dtpNascimento.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Nascimento:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Profissão:";
+            // 
+            // cmbProfissao
+            // 
+            this.cmbProfissao.FormattingEnabled = true;
+            this.cmbProfissao.Items.AddRange(new object[] {
+            "Docente",
+            "Jardineiro",
+            "Faxineiro",
+            "Segurança",
+            "Motorista",
+            "Secretária"});
+            this.cmbProfissao.Location = new System.Drawing.Point(80, 96);
+            this.cmbProfissao.Name = "cmbProfissao";
+            this.cmbProfissao.Size = new System.Drawing.Size(101, 21);
+            this.cmbProfissao.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,14 +268,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.nudIdade);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Registro de Pessoas";
-            ((System.ComponentModel.ISupportInitialize)(this.nudIdade)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistros)).EndInit();
@@ -324,8 +287,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown nudIdade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.GroupBox groupBox1;
